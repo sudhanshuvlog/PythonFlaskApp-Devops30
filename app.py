@@ -6,7 +6,7 @@ def create_app():
 
     @app.route('/')
     def home():
-        return 'GFGGGGGG'
+        return 'GeeksForGeeks'
 
     return app
 
