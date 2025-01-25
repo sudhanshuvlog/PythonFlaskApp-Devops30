@@ -1,14 +1,16 @@
 from flask import Flask
-
-
 def create_app():
-    app = Flask(__name__)
+        app = Flask(__name__)
 
     @app.route('/')
     def home():
-        return 'GFGGGGGG'
+        x=7
+        return     'GeeksforFeeks'
 
+    
     return app
+
+
 
 
 if __name__ == '__main__':
