@@ -1,14 +1,11 @@
 from flask import Flask
 def create_app():
         app = Flask(__name__)
-
-    @app.route('/')
-    def home():
-        x=7
-        return     'GeeksforFeeks'
-
-    
-    return app
+        @app.route('/')
+        def home():
+                x=7
+                return     'GeeksforFeeks'
+        return app
 
 
 
