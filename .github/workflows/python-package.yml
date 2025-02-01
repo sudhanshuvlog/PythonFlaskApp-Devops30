@@ -37,7 +37,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --cov=app --cov-report=xml:coverage.xml
+        pytest --cov
     - name: Print coverage.xml file
       run: |
         cat coverage.xml
@@ -45,6 +45,7 @@ jobs:
   sonarqube:
     name: Build and analyze
     runs-on: ubuntu-latest
+    needs: [build]
     
     steps:
       - uses: actions/checkout@v4
