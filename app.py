@@ -3,8 +3,11 @@ from flask import Flask
 
 def create_app():
     app = Flask(__name__)
+    def testing():
+        print("hi testing...")
     @app.route('/')
     def home():
+        print("hi hello")
         return 'GeeksForGeeks'
 
     return app
